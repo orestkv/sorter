@@ -10,6 +10,8 @@ def list_sorter(list_to_sort):
     
 while True:
     
+    print("This program will sort list of integers and find greatest difference between adjascent numbers")
+    
     try:
         x = input("Enter even amount (at least 4) of integers, separated by space: ")
 

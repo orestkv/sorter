@@ -11,16 +11,16 @@ def list_sorter(list_to_sort):
 while True:
     
     try:
-        x = input("Enter even amount (at least 4) of integers, separated by space: ")
+        x = input("Enter at least 4 or any even number of integers, separated by space: ")
 
         if x.lower() == "exit":
-            print("Bye, bye")
+            print("So long!")
             break
     
         list_to_sort = [int(i) for i in x.split()]
     
         if len(list_to_sort) % 2 != 0:
-            print("\nPlease enter even amount (at least 4) of integers!")
+            print("\nPlease enter even number (at least 4) of integers!")
             continue
         
         elif len(list_to_sort) < 4:
@@ -35,12 +35,12 @@ while True:
             for i in range(len(sorted_list) - 1):
                 diffs.append(sorted_list[i + 1] - sorted_list[i])
             
-            print(f"\nThe greatest difference between adjacent elements is: {max(diffs)}")
+            print(f"\nThe greatest difference between neighbours is: {max(diffs)}")
             
             break
     
     except ValueError:
-        print("\nYou should enter only digits, separted by spaces!")
+        print("\nYou must enter only digits, separted by spaces!")
 
 
 
